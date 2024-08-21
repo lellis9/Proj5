@@ -1,11 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sidebarItems = document.querySelectorAll('#sidebar-list li');
-    const contentDisplay = document.getElementById('content-display');
+// public/script.js
 
-    sidebarItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const title = item.getAttribute('data-title');
-            contentDisplay.innerHTML = `<h3>${title}</h3><p>Information about ${title} will be displayed here.</p>`;
-        });
-    });
-});
+function showHistory(color) {
+    const colorHistory = {
+        red: "Red has been associated with passion, love, and anger. It is one of the first colors used in art.",
+        blue: "Blue is often seen as a calm and peaceful color, representing the sky and the sea.",
+        yellow: "Yellow symbolizes happiness and energy. It is a color often associated with the sun and warmth."
+    };
+
+    const historyElement = document.getElementById('color-history');
+    historyElement.innerHTML = `<h2>The History of ${color.charAt(0).toUpperCase() + color.slice(1)}</h2>
+                                <p>${colorHistory[color]}</p>`;
+}
