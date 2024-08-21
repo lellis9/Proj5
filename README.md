@@ -1,1 +1,1 @@
-not completely finished :\
+This setup provides a simple Node.js Express application where users can learn about the history of colors by clicking on images. The information is displayed dynamically using JavaScript, and the CSS styling makes the page visually appealing!
